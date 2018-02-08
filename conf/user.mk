@@ -1,1 +1,2 @@
-NETID="your-netid"
+# Your NetID below
+NETID=your-netid
