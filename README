@@ -1,0 +1,58 @@
+1. Set the environment variables
+
+   Following tools have been prepared for you:
+     - verilator (in ~nhonarmand/cse502/cse502-tools/bin)
+     - gtkwave   (in ~vagrawal/cse502-tools/bin)
+
+   To use these tools, you need to set the environment variables
+   LD_LIBRARY_PATH and PATH.  The easiest way to do this is to source
+   one of the following shell scripts:
+     - if your shell is bash: ~nhonarmand/cse502/cse502-bashrc
+     - if your shell is csh:  ~nhonarmand/cse502/cse502-cshrc
+
+
+2. Building/Running your simulator code
+
+   Following are the commands to build and run the code:
+
+   > make       // build code
+   > make run   // run code
+
+   Run these commands in the subfolder containing the design, not the
+   top-level HW1 folder.  The result of running the code will be a
+   'trace.vcd' waveform file. You can view it using 'gtkwave' (see
+   instructions below).
+
+
+3. Viewing the trace.vcd waveform
+
+   If you have logged in to the server using the -Y or -X option, you
+   can view waveforms using the following command:
+
+   > gtkwave <path-to-the-vcd-file>
+
+
+4. Submitting your code
+   
+   Type the following command in your project directory. It will sign
+   and submit your code to us:
+
+  > make submit
+
+   Run this command in the top-level HW1 folder, not the
+   design-specific subfolders.
+   
+
+5. What to implement?
+
+   1) There are four sub-projects in this homework: a decoder, a
+   shifter, a packet verifier and a sequential multiplier.  Read the
+   instructions given in each file for the details of what needs to be
+   done in each sub-project.
+
+   2) Make sure you test your designs as much as you can by providing
+   test inputs and checking the output and/or generated waveforms.
+   You should write your tests in "main.cpp".  See the two sample
+   designs, "example-seq" and "example-comb", to learn how to apply
+   inputs and advance the time when testing.
+
