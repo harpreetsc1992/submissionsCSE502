@@ -30,7 +30,9 @@
 
 
 4. Submitting your code
-   
+
+   First, make sure that you have set your NETID in 'conf/user.mk'.
+
    Type the following command in your project directory. It will sign
    and submit your code to us:
 
