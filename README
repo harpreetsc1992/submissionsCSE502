@@ -1,14 +1,11 @@
-1. Set the environment variables
+1. Tools
 
    Following tools have been prepared for you:
-     - verilator (in ~nhonarmand/cse502/cse502-tools/bin)
-     - gtkwave   (in ~vagrawal/cse502-tools/bin)
+     - verilator
+     - gtkwave
 
-   To use these tools, you need to set the environment variables
-   LD_LIBRARY_PATH and PATH.  The easiest way to do this is to source
-   one of the following shell scripts:
-     - if your shell is bash: ~nhonarmand/cse502/cse502-bashrc
-     - if your shell is csh:  ~nhonarmand/cse502/cse502-cshrc
+   To use gtkwave, you need to ssh to your VM usign -Y (or -X) options
+   to enable tunneling.
 
 
 2. Building/Running your simulator code
@@ -20,7 +17,7 @@
 
    Run these commands in the subfolder containing the design, not the
    top-level HW1 folder.  The result of running the code will be a
-   'trace.vcd' waveform file. You can view it using 'gtkwave' (see
+   'trace.vcd' waveform file.  You can view it using 'gtkwave' (see
    instructions below).
 
 

@@ -2,7 +2,7 @@ include Makefile.common
 include conf/lab.mk
 include conf/user.mk
 
-HANDIN_FILE=/tmp/$(NETID)-$(LAB).tar.gz
+HANDIN_FILE=/tmp/$(NETID)-lab$(LAB).tar.gz
 SUB_PROJECTS=01-decoder  02-shifter  03-packet  04-mult  example-comb  example-seq
 
 submit: clean
