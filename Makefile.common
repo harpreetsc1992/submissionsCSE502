@@ -1,10 +1,6 @@
 .PHONY: all progs run clean submit
 
 TRACE=--trace
-
-LIBPATH=/home/stufs1/vagrawal/cse502-tools/lib 
-INCPATH=/home/stufs1/vagrawal/cse502-tools/include
-
 VFILES=$(wildcard *.sv)
 CFILES=$(wildcard *.cpp)
 
@@ -13,12 +9,11 @@ VTOP_COMMAND_LINE=
 all: obj_dir/Vtop
 
 obj_dir/Vtop: obj_dir/Vtop.mk
-	$(MAKE) -j2 -C obj_dir/ -f Vtop.mk CXX="ccache g++"
+	$(MAKE) -j2 -C obj_dir/ -f Vtop.mk CXX="g++"
 
 obj_dir/Vtop.mk: $(VFILES) $(CFILES) 
 	verilator -Wall -Wno-LITENDIAN -Wno-lint -O3 $(TRACE) --no-skip-identical --cc top.sv \
-	--exe $(CFILES) --top-module top \
-	-CFLAGS -I$(INCPATH) -LDFLAGS -L$(LIBPATH)
+	--exe $(CFILES) --top-module top
 
 run: obj_dir/Vtop
 	cd obj_dir/ && ./Vtop $(VTOP_COMMAND_LINE)
