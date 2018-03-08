@@ -9,11 +9,11 @@
 
 module top(
   input enable,
-  intput [3:0] in,
+  input [3:0] in,
   output [15:0] sel
 );
 
-
+assign sel = enable ? (1 << in): 4'h0;
 endmodule // top
 
 

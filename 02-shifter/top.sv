@@ -18,7 +18,16 @@ module top(
     output [31:0] out
 );
 
+always_comb begin
+    case (op)
+        3'h0: out = in << cnt;
+        3'h1: out = in >> cnt;
+        3'h2: out = $signed(in) <<< cnt;
+        3'h3: out = $signed(in) >>> cnt;
+        3'h4: out = (in << cnt) | (in >> ~cnt);
+        3'h5: out = (in >> cnt) | (in << ~cnt);
+        default: out = 32'hxxxxxxxx;
+    endcase
+end
 
 endmodule // top
-
-

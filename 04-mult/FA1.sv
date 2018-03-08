@@ -9,8 +9,8 @@ module FA1(a, b, cin, sum, cout);
   input  a, b, cin;
   output sum, cout;
 
-  assign sum  = ...
-  assign cout = ...
+  assign sum  = ((~cin) & a & (~b)) | ((~cin) & (~a) & b ) | (cin & (~a) & (~b)) | (cin & a & b); 
+  assign cout = ((~cin) & a & b) | ((cin) & (~a) & b ) | (cin & (a) & (~b)) | (cin & a & b);
 endmodule // top
 
 
